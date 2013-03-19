@@ -1,4 +1,5 @@
 $gutter-width-px: 20 !default;
+$use-clearfix: false !default;
 
 @mixin device-type($value: "") {
 	%#{$value}one-whole {
@@ -122,6 +123,35 @@ $gutter-width-px: 20 !default;
 	}
 }
 
+%grid {
+	margin-left: -$gutter-width-px + px;
+	@if $use-clearfix == false {
+		overflow: hidden;
+	}
+	@else if $use-clearfix == true {
+		@extend %clearfix;
+	}
+}
+
+%grid__item {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-left: $gutter-width-px + px;
+	float: left;
+}
+
+%clearfix {
+	&:before, &:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+	*zoom: 1;
+}
+
 @include device-type;
 
 @include breakpoint(baby-bear) {
@@ -134,17 +164,4 @@ $gutter-width-px: 20 !default;
 
 @include breakpoint(papa-bear) {
 	@include device-type(papa-bear-);
-}
-
-%grid {
-	margin-left: -$gutter-width-px + px;
-	overflow: hidden;
-}
-
-%grid__item {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	padding-left: $gutter-width-px + px;
-	float: left;
 }
