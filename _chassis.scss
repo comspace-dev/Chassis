@@ -50,6 +50,30 @@ $use-clearfix: false !default;
 		width: percentage(5/6);
 	}
 
+	%#{$value}one-seventh {
+		width: percentage(1/7);
+	}
+
+	%#{$value}two-sevenths {
+		width: percentage(2/7);
+	}
+
+	%#{$value}three-sevenths {
+		width: percentage(3/7);
+	}
+
+	%#{$value}four-sevenths {
+		width: percentage(4/7);
+	}
+
+	%#{$value}five-sevenths {
+		width: percentage(5/7);
+	}
+
+	%#{$value}six-sevenths {
+		width: percentage(6/7);
+	}
+
 	%#{$value}one-eigth {
 		width: percentage(1/8);
 	}
@@ -104,6 +128,46 @@ $use-clearfix: false !default;
 
 	%#{$value}nine-tenths {
 		width: percentage(9/10);
+	}
+
+	%#{$value}one-eleventh {
+		width: percentage(1/11);
+	}
+
+	%#{$value}two-elevenths {
+		width: percentage(2/11);
+	}
+
+	%#{$value}three-elevenths {
+		width: percentage(3/11);
+	}
+
+	%#{$value}four-elevenths {
+		width: percentage(4/11);
+	}
+
+	%#{$value}five-elevenths {
+		width: percentage(5/11);
+	}
+
+	%#{$value}six-elevenths {
+		width: percentage(6/11);
+	}
+
+	%#{$value}seven-elevenths {
+		width: percentage(7/11);
+	}
+
+	%#{$value}eight-elevenths {
+		width: percentage(8/11);
+	}
+
+	%#{$value}nine-elevenths {
+		width: percentage(9/11);
+	}
+
+	%#{$value}ten-elevenths {
+		width: percentage(10/11);
 	}
 
 	%#{$value}one-twelth {
