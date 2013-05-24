@@ -185,24 +185,24 @@ $use-clearfix: false !default;
 	%#{$value}eleven-twelths {
 		width: percentage(11/12);
 	}
-}
 
-%grid {
-	margin-left: -$gutter-width-px + px;
-	@if $use-clearfix == false {
-		overflow: hidden;
+	%#{$value}grid {
+		margin-left: -$gutter-width-px + px;
+		@if $use-clearfix == false {
+			overflow: hidden;
+		}
+		@else if $use-clearfix == true {
+			@extend %clearfix;
+		}
 	}
-	@else if $use-clearfix == true {
-		@extend %clearfix;
-	}
-}
 
-%grid__item {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	padding-left: $gutter-width-px + px;
-	float: left;
+	%#{$value}grid__item {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		padding-left: $gutter-width-px + px;
+		float: left;
+	}
 }
 
 %clearfix {
