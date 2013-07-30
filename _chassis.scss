@@ -205,18 +205,23 @@ $use-clearfix: false !default;
 	}
 }
 
-%clearfix {
-	*zoom: 1;
+$has-clearfix: false !default;
 
-	&:before,
-	&:after {
-		content: "";
-		display: table;
-	}
+@if not $has-clearfix {
+	%clearfix {
+		*zoom: 1;
 
-	&:after {
-		clear: both;
+		&:before,
+		&:after {
+			content: "";
+			display: table;
+		}
+
+		&:after {
+			clear: both;
+		}
 	}
+	$has-clearfix: true;
 }
 
 @include device-type;
