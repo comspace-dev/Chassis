@@ -192,7 +192,17 @@ $use-clearfix: false !default;
 			overflow: hidden;
 		}
 		@else if $use-clearfix == true {
-			@extend %clearfix;
+			*zoom: 1;
+
+			&:before,
+			&:after {
+				content: "";
+				display: table;
+			}
+
+			&:after {
+				clear: both;
+			}
 		}
 	}
 
@@ -203,25 +213,6 @@ $use-clearfix: false !default;
 		padding-left: $gutter-width-px + px;
 		float: left;
 	}
-}
-
-$has-clearfix: false !default;
-
-@if not $has-clearfix {
-	%clearfix {
-		*zoom: 1;
-
-		&:before,
-		&:after {
-			content: "";
-			display: table;
-		}
-
-		&:after {
-			clear: both;
-		}
-	}
-	$has-clearfix: true;
 }
 
 @include device-type;
