@@ -192,15 +192,9 @@ $use-clearfix: false !default;
 			overflow: hidden;
 		}
 		@else if $use-clearfix == true {
-			*zoom: 1;
-
-			&:before,
 			&:after {
 				content: "";
 				display: table;
-			}
-
-			&:after {
 				clear: both;
 			}
 		}
