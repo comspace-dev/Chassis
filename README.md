@@ -5,7 +5,7 @@ Chassis is a mixin for Sass giving you a solid grid ready for use on your websit
 ## Requirements
 
 - Of course you need a way to compile [Sass](http://sass-lang.com)
-- You should import Pilot before all other Sass files
+- You should import Chassis before all other Sass files
 
 ## Constants
 
@@ -14,9 +14,7 @@ Chassis is a mixin for Sass giving you a solid grid ready for use on your websit
 
 The default value for the width of the gutter is set to 20px. If you like to change that, do that in your custom stylesheet. Do not edit this value in the Chassis file.
 
-Change the value of <code>$use-clearfix</code> to <code>true</code> if you like to clear the floats with the clearfix placeholder class instead of <code>overflow: hidden;</code>.
-
-## The mixin
+Change the value of <code>$use-clearfix</code> to <code>true</code> if you like to clear the floats with the clearfix instead of <code>overflow: hidden;</code>.
 
 ## Placeholder classes
 
@@ -28,6 +26,6 @@ This class is the container for our grids. It does clear the floats of the grids
 
 This is the base class for our grids. You should <code>@extend</code> it wherever you need a grid.
 
-### %clearfix
+### %grid__item--one-third
 
-If you choose to clear the floats with the clearfix this class is used. We provide this class because we can not know if you already have a clearfix class in your stylesheet. Safety first.
+These <code>@extends</code> define the width of the grid. You can choose from one whole down to twelfths.
