@@ -201,9 +201,6 @@ $use-clearfix: false !default;
 	}
 
 	%#{$value}grid__item {
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
 		padding-left: $gutter-width-px + px;
 		float: left;
 	}
