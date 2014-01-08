@@ -1,0 +1,13 @@
+@include device-type;
+
+@include breakpoint(baby-bear) {
+	@include device-type(baby-bear-);
+}
+
+@include breakpoint(mama-bear) {
+	@include device-type(mama-bear-);
+}
+
+@include breakpoint(papa-bear) {
+	@include device-type(papa-bear-);
+}
