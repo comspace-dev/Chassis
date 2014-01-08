@@ -4,10 +4,10 @@ Chassis is a mixin for Sass giving you a solid grid ready for use on your websit
 
 ## Requirements
 
-- Of course you need a way to compile [Sass](http://sass-lang.com)
-- You should import Chassis before all other Sass files
+* Of course you need a way to compile [Sass](http://sass-lang.com)
+* You should import Chassis before all other Sass files
 
-## Constants
+## Defaults
 
 	$gutter-width-px: 20 !default;
 	$use-clearfix: false !default;
