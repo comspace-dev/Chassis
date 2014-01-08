@@ -1,5 +1,7 @@
-$gutter-width-px: 20 !default;
-$use-clearfix: false !default;
+// v1.5.0
+
+// defaults
+@import "defaults";
 
 @mixin device-type($value: "") {
 	%#{$value}one-whole {
@@ -206,16 +208,5 @@ $use-clearfix: false !default;
 	}
 }
 
-@include device-type;
-
-@include breakpoint(baby-bear) {
-	@include device-type(baby-bear-);
-}
-
-@include breakpoint(mama-bear) {
-	@include device-type(mama-bear-);
-}
-
-@include breakpoint(papa-bear) {
-	@include device-type(papa-bear-);
-}
+// includes for breakpoints
+@import "imports/breakpoints.scss";
