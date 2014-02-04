@@ -11,10 +11,13 @@ Chassis is a mixin for Sass giving you a solid grid ready for use on your websit
 
 	$gutter-width-px: 20 !default;
 	$use-clearfix: false !default;
+	$breakpoints: baby-bear 400, mama-bear 650, papa-bear 940 !default;
 
 The default value for the width of the gutter is set to 20px. If you like to change that, do that in your custom stylesheet. Do not edit this value in the Chassis file.
 
 Change the value of <code>$use-clearfix</code> to <code>true</code> if you like to clear the floats with the clearfix instead of <code>overflow: hidden;</code>.
+
+The list of breakpoint consists of names and pixel values, although the pixel values are currently not used in Chassis.
 
 ## Placeholder classes
 
