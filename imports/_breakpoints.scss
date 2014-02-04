@@ -1,13 +1,7 @@
 @include device-type;
 
-@include breakpoint(baby-bear) {
-	@include device-type(baby-bear-);
-}
-
-@include breakpoint(mama-bear) {
-	@include device-type(mama-bear-);
-}
-
-@include breakpoint(papa-bear) {
-	@include device-type(papa-bear-);
+@each $breakpoint in $breakpoints {
+    @include breakpoint(#{nth($breakpoint, 1)}){
+    	@include device-type("#{nth($breakpoint, 1)}-");
+    }
 }
