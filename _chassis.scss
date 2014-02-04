@@ -190,15 +190,15 @@
 
 	%#{$value}grid {
 		margin-left: -$gutter-width-px + px;
-		@if $use-clearfix == false {
-			overflow: hidden;
-		}
-		@else if $use-clearfix == true {
+		@if $use-clearfix {
 			&:after {
 				content: "";
 				display: table;
 				clear: both;
 			}
+		}
+		@else {
+			overflow: hidden;
 		}
 	}
 
