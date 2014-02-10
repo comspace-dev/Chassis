@@ -1,4 +1,4 @@
-// v1.6.0
+// v1.6.1
 
 // defaults
 @import "defaults";
@@ -191,9 +191,12 @@
 	%#{$value}grid {
 		margin-left: -$gutter-width-px + px;
 		@if $use-clearfix {
+			&:before,
 			&:after {
 				content: "";
 				display: table;
+			}
+			&:after {
 				clear: both;
 			}
 		}
